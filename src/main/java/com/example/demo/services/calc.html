@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--ThymeleafをHTMLファイルで使用する為-->
+<head>
+<meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+<!--ThymeleafをHTMLファイルで使用する為-->
+<title>webCalculate</title>
+</head>
+<body>
+	<p>
+		<strong><span th:text="${message}"></span></strong>
+	</p>
+	<p>【足し算】数値を入力してください！</p>
+	<form method="POST" action="resAdd">
+		<input type="text" inputmode=decimal name="addNumA" value=0>
+		<!--数字を打つところ-->
+		<b>+</b>
+		<!--太文字にしたいからbタグ-->
+		<input type="text" inputmode=decimal name="addNumB" value=0>
+		<!--数字を打つところ-->
+
+		<input type=submit value="送信">
+		<!--送信ボタン-->
+	</form>
+
+	<p>
+		<strong><span th:text="${message}"></span></strong>
+	</p>
+	<p>【引き算】数値を入力してください！</p>
+	<form method="POST" action="resSubtract">
+		<input type="text" inputmode=decimal name="subtractNumA" value=0>
+		<!--数字を打つところ-->
+		<b>－</b>
+		<!--太文字にしたいからbタグ-->
+		<input type="text" inputmode=decimal name="subtractNumB" value=0>
+		<!--数字を打つところ-->
+
+		<input type=submit value="送信">
+		<!--送信ボタン-->
+	</form>
+
+	<p>
+		<strong><span th:text="${message}"></span></strong>
+	</p>
+	<p>【かけ算】数値を入力してください！</p>
+	<form method="POST" action="resMultiply">
+		<input type="text" inputmode=decimal name="multiplyNumA" value=0>
+		<!--数字を打つところ-->
+		<b>×</b>
+		<!--太文字にしたいからbタグ-->
+		<input type="text" inputmode=decimal name="multiplyNumB" value=0>
+		<!--数字を打つところ-->
+
+		<input type=submit value="送信">
+		<!--送信ボタン-->
+	</form>
+
+	<p>
+		<strong><span th:text="${message}"></span></strong>
+	</p>
+	<p>【割り算】数値を入力してください！</p>
+	<form method="POST" action="resDivide">
+		<input type="text" inputmode=decimal name="divideNumA" value=0>
+		<!--数字を打つところ-->
+		<b>÷</b>
+		<!--太文字にしたいからbタグ-->
+		<input type="text" inputmode=decimal name="divideNumB" value=1>
+		<!--数字を打つところ-->
+
+		<input type=submit value="送信">
+		<!--送信ボタン-->
+	</form>
+
+	<p>
+		<strong><span th:text="${message}"></span></strong>
+	</p>
+	<p>【余りの計算】数値を入力してください！</p>
+	<form method="POST" action="resRemainder">
+		<input type="text" inputmode=decimal name="remainderNumA" value=0>
+		<!--数字を打つところ-->
+		<b>÷</b>
+		<!--太文字にしたいからbタグ-->
+		<input type="text" inputmode=decimal name="remainderNumB" value=1>
+		<!--数字を打つところ-->
+
+		<input type=submit value="送信">
+		<!--送信ボタン-->
+	</form>
+
+	<p>
+		<strong><span th:text="${message}"></span></strong>
+	</p>
+	<p>【累乗の計算】数値を入力してください！</p>
+	<form method="POST" action="resPow">
+		<input type="text" inputmode=decimal name="powNumA" value=0>
+		<!--数字を打つところ-->
+		<b>の</b>
+		<!--太文字にしたいからbタグ-->
+		<input type="text" inputmode=decimal name="powNumB" value=0>
+		<!--数字を打つところ-->
+		<b>乗</b> <input type=submit value="送信">
+		<!--送信ボタン-->
+	</form>
+
+</body>
+</html>
